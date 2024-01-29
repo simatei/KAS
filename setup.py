@@ -19,7 +19,7 @@ setup(name='koalix-crm',
                         'pytz==2017.2',
                         'django-grappelli==2.10.1',
                         'djangorestframework>=3.9.1',
-                        'markdown==2.6.11',
+                        'markdown==3.5.2',
                         'django-filter==1.1.0',
                         'djangorestframework-xml==1.3.0'
                         ],
