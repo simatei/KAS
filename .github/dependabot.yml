@@ -1,14 +1,18 @@
-# Config for Dependabot updates. See Documentation here:
-# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
-
 version: 2
 updates:
-
-  # Enable version updates for Python/Pip - Production
   - package-ecosystem: "pip"
-    # Look for a `requirements.txt` in the `root` directory
-    # also 'setup.cfg', 'runtime.txt' and 'requirements/*.txt'
-    directory: "/"
-    # Check for updates to GitHub Actions every weekday
+    directory: "requirements/base_requirements.txt"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "pip"
+    directory: "requirements/development_requirements.txt"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "pip"
+    directory: "requirements/heroku_requirements.txt"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "pip"
+    directory: "requirements/test_requirements.txt"
     schedule:
       interval: "daily"
